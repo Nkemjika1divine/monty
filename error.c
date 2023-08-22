@@ -7,5 +7,6 @@ void malloc_error(void)
 {
 	char output = "Error: malloc failed";
 
-	if(write(2, output, strlen(output)) < 0)
+	if (write(2, output, strlen(output)) < 0)
 		perror("write failure");
+}
