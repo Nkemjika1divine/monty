@@ -1,3 +1,6 @@
+#ifndef MONTY_H
+#define MONTY_H
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -34,3 +37,7 @@ typedef struct instruction_s
 } instruction_t;
 
 extern stack_t *top = NULL;
+
+void malloc_error(void);
+
+#endif
