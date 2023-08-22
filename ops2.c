@@ -21,6 +21,7 @@ int add(void)
 
 	second->n = a;
 	top = second;
+	free(first);
 	return (1);
 }
 
@@ -55,6 +56,7 @@ int sub(void)
 
 	second->n = a;
 	top = second;
+	free(first);
 	return (1);
 }
 
@@ -82,6 +84,7 @@ int div(void)
 
 	second->n = a;
 	top = second;
+	free(first);
 	return (1);
 }
 
@@ -107,5 +110,6 @@ int mul(void)
 
 	second->n = a;
 	top = second;
+	free(first);
 	return (1);
 }
