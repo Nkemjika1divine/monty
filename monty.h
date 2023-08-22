@@ -38,6 +38,10 @@ typedef struct instruction_s
 
 extern stack_t *top = NULL;
 
+/*ops.c*/
+void push(int n);
+
+/*util.c*/
 void malloc_error(void);
 
 #endif
