@@ -57,6 +57,17 @@ int div(void);
 int mul(void);
 
 
+
+/*ops3.c*/
+int mod(void);
+
+
+/*main.c*/
+void format_line1(char *tokens[], int count);
+void format_line2(char *tokens[], int count);
+void format_line3(char *tokens[], int count);
+
+
 /*error.c*/
 void malloc_error(void);
 

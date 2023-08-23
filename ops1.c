@@ -83,7 +83,7 @@ int pint(void)
 	if (top == NULL)
 		return (-1);
 
-	printf("%d", top->data);
+	printf("%d", top->n);
 	return (1);
 }
 
