@@ -29,18 +29,21 @@ int main(int argc, char *argv[])
 	}
 	while (fgets(line, sizeof(line), fd) != NULL)
 	{
-		count++;
-		line[strcspn(line, "\n")] = '\0'; /*null terminate the line*/
-		vec = strtok(line, " "); /*tokenize the line*/
-		i = 0;
-		while (vec != NULL)
+		if (spaces(line) != 1)
 		{
-			tokens[i++] = _strdup(vec);
-			vec = strtok(NULL, " ");
+			count++;
+			line[strcspn(line, "\n")] = '\0'; /*null terminate the line*/
+			vec = strtok(line, " "); /*tokenize the line*/
+			i = 0;
+			while (vec != NULL)
+			{
+				tokens[i++] = _strdup(vec);
+				vec = strtok(NULL, " ");
+			}
+			format_line1(tokens, count);
+			for (a = 0; a < i; a++)
+				free(tokens[a]);
 		}
-		format_line1(tokens, count);
-		for (a = 0; a < i; a++)
-			free(tokens[a]);
 	}
 	fclose(fd);
 	return (0);
