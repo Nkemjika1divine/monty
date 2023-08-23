@@ -68,8 +68,6 @@ void format_line1(char *tokens[], int count)
 		else
 			push(a);
 	}
-	else if (strcmp(tokens[0], "pall") == 0)
-		pall();
 	else if (strcmp(tokens[0], "pop") == 0)
 	{
 		if (pop() == -1)
@@ -172,6 +170,8 @@ void format_line3(char *tokens[], int count)
 	}
 	else if (strcmp(tokens[0], "nop") == 0)
 		nop();
+	else if (strcmp(tokens[0], "pall") == 0)
+		pall();
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", count, tokens[0]);

@@ -63,7 +63,7 @@ int sub(void)
 
 
 /**
- * div - divides the too by the secind and reolaces the second with the reault
+ * divi - divides the too by the secind and reolaces the second with the reault
  *
  * Return: 1 f successful, 0 if top is 0 and -1 if not successful
  */
