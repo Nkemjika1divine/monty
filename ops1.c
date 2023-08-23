@@ -50,7 +50,8 @@ int pop(void)
 		return (-1);
 
 	top = top->next;
-	top->prev = NULL;
+	if (top != NULL)
+		top->prev = NULL;
 	free(temp);
 
 	return (1);
