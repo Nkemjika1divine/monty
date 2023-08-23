@@ -35,13 +35,12 @@ int main(int argc, char *argv[])
 		i = 0;
 		while (vec != NULL)
 		{
-			tokens[i++] = strdup(vec);
+			tokens[i++] = _strdup(vec);
 			vec = strtok(NULL, " ");
 		}
 		format_line1(tokens, count);
 		for (a = 0; a < i; a++)
 			free(tokens[a]);
-		free(tokens);
 	}
 	fclose(fd);
 	return (0);
@@ -134,12 +133,12 @@ void format_line2(char *tokens[], int count)
 	}
 	else if (strcmp(tokens[0], "div") == 0)
 	{
-		if (div() == -1)
+		if (divi() == -1)
 		{
 			fprintf(stderr, "L%d: can't add, stack too short\n", count);
 			exit(EXIT_FAILURE);
 		}
-		else if (div() == 0)
+		else if (divi() == 0)
 		{
 			fprintf(stderr, "L%d: division by zero\n", count);
 			exit(EXIT_FAILURE);

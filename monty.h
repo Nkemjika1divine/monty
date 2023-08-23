@@ -37,7 +37,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern stack_t *top = NULL;
+extern stack_t *top;
 
 
 /*ops1.c*/
@@ -53,7 +53,7 @@ int pint(void);
 int add(void);
 void nop(void);
 int sub(void);
-int div(void);
+int divi(void);
 int mul(void);
 
 
@@ -68,7 +68,7 @@ void format_line2(char *tokens[], int count);
 void format_line3(char *tokens[], int count);
 
 
-/*error.c*/
-void malloc_error(void);
+/*utility.c*/
+char *_strdup(char *str);
 
 #endif

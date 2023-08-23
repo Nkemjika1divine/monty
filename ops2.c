@@ -67,7 +67,7 @@ int sub(void)
  *
  * Return: 1 f successful, 0 if top is 0 and -1 if not successful
  */
-int div(void)
+int divi(void)
 {
 	stack_t *first = top, *second = top->next;
 	int a = 0;

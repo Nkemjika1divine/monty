@@ -1,5 +1,7 @@
 #include "monty.h"
 
+stack_t *top = NULL;
+
 /**
  * push - this function oushes an element onto a stack
  * @n: the element to be added
