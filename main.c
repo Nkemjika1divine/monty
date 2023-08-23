@@ -29,12 +29,12 @@ int main(int argc, char *argv[])
 	}
 	while (fgets(line, sizeof(line), fd) != NULL)
 	{
-		if (spaces(line) != 1)
+		if (spaces(line) != 1) /*if the line is not a whitespace*/
 		{
 			count++;
 			line[strcspn(line, "\n")] = '\0'; /*null terminate the line*/
 			vec = strtok(line, " "); /*tokenize the line*/
-			if (vec[0] == '#')
+			if (vec[0] == '#') /*if the first character is a #*/
 				continue;
 			i = 0;
 			while (vec != NULL)

@@ -72,5 +72,6 @@ void format_line3(char *tokens[], int count);
 char *_strdup(char *str);
 int is_space(char c);
 int spaces(char *input);
+char *remove_hash(char *line);
 
 #endif

@@ -67,3 +67,23 @@ int is_space(char c)
 		return (0);
 	return (1);
 }
+
+
+
+
+/**
+ * remove_hash - this function checks for hash inbetween a line
+ * @line: the line to check
+ *
+ * Return: new string if there is a hash
+ */
+char *remove_hash(char *line)
+{
+	char *hash;
+	
+	hash = strchr(line, '#');
+
+	if (hash != NULL)
+		*hash = '\0';
+	return (line);
+}
