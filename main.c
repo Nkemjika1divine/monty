@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
 			count++;
 			line[strcspn(line, "\n")] = '\0'; /*null terminate the line*/
 			vec = strtok(line, " "); /*tokenize the line*/
+			if (vec[0] == '#')
+				continue;
 			i = 0;
 			while (vec != NULL)
 			{
