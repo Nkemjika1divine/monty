@@ -29,7 +29,7 @@ void push(int n)
 			temp->prev = NULL;
 			temp->n = n;
 			temp->next = top;
-			top->next = temp;
+			top->prev = temp;
 
 			top = temp;
 		}
@@ -68,7 +68,7 @@ void pall(void)
 	{
 		while (temp != NULL)
 		{
-			printf("%d", temp->n);
+			printf("%d\n", temp->n);
 			temp = temp->next;
 		}
 	}
@@ -85,7 +85,7 @@ int pint(void)
 	if (top == NULL)
 		return (-1);
 
-	printf("%d", top->n);
+	printf("%d\n", top->n);
 	return (1);
 }
 
