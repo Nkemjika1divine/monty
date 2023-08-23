@@ -50,7 +50,7 @@ int sub(void)
 	if (top == NULL || top->next == NULL)
 		return (-1);
 
-	a = first->n - second->n;
+	a = second->n - first->n;
 
 	first->next = NULL;
 	second->prev = NULL;
