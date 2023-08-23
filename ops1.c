@@ -2,7 +2,7 @@
 
 /**
  * push - this function oushes an element onto a stack
- * @n: the element tk add
+ * @n: the element to be added
  */
 void push(int n)
 {

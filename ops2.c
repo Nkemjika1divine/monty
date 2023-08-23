@@ -1,7 +1,8 @@
 #include "monty.h"
 
 /**
- * add - adds tbe top 2 elements of the stack & uses it to replace the second
+ * add - this function adds the top 2 elements of the stack &
+ * uses it to replace the second
  *
  * Return: 1 if successful and 0 if not
  */
