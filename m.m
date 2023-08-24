@@ -1,5 +1,14 @@
-push 77777770
-push 10
+push 1
+push 2
 push 3
-push 47
-pall
+push 4
+push 9
+push 110
+push 8
+push 108
+push 111
+push 111
+push 104
+push 99
+push 83
+pstr

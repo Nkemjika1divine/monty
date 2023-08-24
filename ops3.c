@@ -66,9 +66,13 @@ void pstr(void)
 			if (temp->n == 0)
 				break;
 			if (putchar(temp->n) == EOF)
+			{
+				putchar('\n');
 				break;
+			}
 			temp = temp->next;
 		}
+		putchar('\n');
 	}
 	else
 		putchar('\n');
