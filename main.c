@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	FILE *fd;
-	char line[20], *tokens[5], *vec, *str;
+	char line[20], *tokens[5], *vec;
 	int count = 0, a, i;
 
 	if (argc != 2)
@@ -27,24 +27,23 @@ int main(int argc, char *argv[])
 	}
 	while (fgets(line, sizeof(line), fd) != NULL)
 	{
-		str = fix_string(line);
-		if (str == NULL)
-			continue;
-		count++;
-		line[strcspn(str, "\n")] = '\0'; /*null terminate the line*/
-		vec = strtok(str, " "); /*tokenize the line*/
-		if (vec[0] == '#') /*if the first character is a #*/
-			continue;
-		i = 0;
-		while (vec != NULL)
+		if (spaces(line) != 1)
 		{
-			tokens[i++] = _strdup(vec);
-			vec = strtok(NULL, " ");
+			count++;
+			line[strcspn(line, "\n")] = '\0'; /*null terminate the line*/
+			vec = strtok(line, " "); /*tokenize the line*/
+			if (vec[0] == '#') /*if the first character is a #*/
+				continue;
+			i = 0;
+			while (vec != NULL)
+			{
+				tokens[i++] = _strdup(vec);
+				vec = strtok(NULL, " ");
+			}
+			format_line1(tokens, count);
+			for (a = 0; a < i; a++)
+				free(tokens[a]);
 		}
-		format_line1(tokens, count);
-		for (a = 0; a < i; a++)
-			free(tokens[a]);
-		free(str);
 	}
 	fclose(fd);
 	return (0);
