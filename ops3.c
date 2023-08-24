@@ -32,6 +32,7 @@ int mod(void)
 
 /**
  * pchar - this function orints the ascii valie of the top element
+ * @count: line number
  *
  * Return: 1 if successful, 0 if element cant be cobverted ,-1 if stack emoty
  */
@@ -77,3 +78,10 @@ void pstr(void)
 	else
 		putchar('\n');
 }
+
+
+
+
+/**
+ * rotl - this rotates the stack one place forward. top is last and 2nd is top
+ */
