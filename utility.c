@@ -87,3 +87,50 @@ char *remove_hash(char *line)
 		*hash = '\0';
 	return (line);
 }
+
+
+
+
+/**
+ * fix_string - this function checks if a line has multiple spaces between words
+ * @line: the string to check
+ *
+ * Return: new string wuth normal spacing between words
+ */
+char *fix_string(char *line)
+{
+	char *normal, *token = line;
+	bool firstNonSpace = false;
+	char *buffer = malloc(strlen(line) + 1);
+	
+	if (buffer == NULL)
+		return (NULL);
+
+	if (spaces(line) != 1)
+	{
+		normal = buffer;
+		while (*token)
+		{
+			if (!isspace(*token))
+			{
+				*normal = *token;
+				normal++;
+				firstNonSpace = true;
+			}
+			else if (firstNonSpace)
+			{
+				*normal = ' ';
+				normal++;
+				while (isspace(*(token + 1)))
+					token++;
+			}
+			token++;
+		}
+		*normal = '\0';
+		return (normal);
+	}
+	else
+		return (NULL);
+
+	return (normal);
+}

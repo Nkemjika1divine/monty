@@ -1,6 +1,8 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#include <stdbool.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -73,5 +75,6 @@ char *_strdup(char *str);
 int is_space(char c);
 int spaces(char *input);
 char *remove_hash(char *line);
+char *fix_string(char *line);
 
 #endif
