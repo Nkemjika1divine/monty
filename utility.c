@@ -80,7 +80,7 @@ int is_space(char c)
 char *remove_hash(char *line)
 {
 	char *hash;
-	
+
 	hash = strchr(line, '#');
 
 	if (hash != NULL)
@@ -92,7 +92,7 @@ char *remove_hash(char *line)
 
 
 /**
- * fix_string - this function checks if a line has multiple spaces between words
+ * fix_string - this function checks if a line has multiple spaces between word
  * @line: the string to check
  *
  * Return: new string wuth normal spacing between words
@@ -102,7 +102,7 @@ char *fix_string(char *line)
 	char *normal, *token = line;
 	bool firstNonSpace = false;
 	char *buffer = malloc(strlen(line) + 1);
-	
+
 	if (buffer == NULL)
 		return (NULL);
 
