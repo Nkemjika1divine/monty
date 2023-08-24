@@ -64,6 +64,7 @@ int mul(void);
 int mod(void);
 int pchar(int count);
 void pstr(void);
+void rotr(void);
 
 
 /*main.c*/

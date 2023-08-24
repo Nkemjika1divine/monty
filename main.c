@@ -194,6 +194,8 @@ void format_line3(char *tokens[], int count)
 	}
 	else if (strcmp(tokens[0], "pstr") == 0)
 		pstr();
+	else if (strcmp(tokens[0], "rotr") == 0)
+		rotr();
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", count, tokens[0]);

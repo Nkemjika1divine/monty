@@ -85,3 +85,23 @@ void pstr(void)
 /**
  * rotl - this rotates the stack one place forward. top is last and 2nd is top
  */
+void rotr(void)
+{
+	stack_t *first = top;
+	stack_t *second = first->next;
+
+	if (top != NULL)
+	{
+		first->next = NULL;
+		first->prev = second;
+
+		while (second != NULL)
+		{
+			second->prev = second->next;
+			second->next = first;
+			first = second;
+			second = second->prev;
+		}
+		top = first;
+	}
+}
