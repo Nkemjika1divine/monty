@@ -1,7 +1,8 @@
 #include "monty.h"
 
 /**
- * mod - returns the remainder of the division of 2nd by top and syroes in 2nd
+ * mod - this function returns the remainder of the division of 2nd
+ * by top and syroes in 2nd
  *
  * Return: 1 if successful, 0 if top is 0 and -1 if unsuccessful
  */
