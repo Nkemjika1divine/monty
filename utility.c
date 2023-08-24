@@ -2,9 +2,9 @@
 
 /**
  * _strdup - this function duplicates a string
- * @str: stribg
+ * @str: string
  *
- * Return: new strung
+ * Return: new string
  */
 char *_strdup(char *str)
 {
@@ -54,7 +54,7 @@ int spaces(char *input)
 
 /**
  * is_space - this function checks if a character is a whitespace
- * @c: character to check
+ * @c: character to be checked
  *
  * Return: 1 if character is a whitespace and 0 if not
  */
