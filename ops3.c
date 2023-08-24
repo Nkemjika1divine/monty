@@ -50,3 +50,26 @@ int pchar(int count)
 	return (1);
 }
 
+
+
+/**
+ * pstr - prints te elements as their ascii vakues
+ */
+void pstr(void)
+{
+	stack_t *temp = top;
+
+	if (top != NULL)
+	{
+		while (temp != NULL)
+		{
+			if (temp->n == 0)
+				break;
+			if (putchar(temp->n) == EOF)
+				break;
+			temp = temp->next;
+		}
+	}
+	else
+		putchar('\n');
+}

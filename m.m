@@ -1,8 +1,5 @@
-               push           8
-      #bin
-     # bin
-           pall #bin
-                push 67 # ten
-push         5
-push       5
+push 77777770
+push 10
+push 3
+push 47
 pall
