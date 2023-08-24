@@ -182,6 +182,14 @@ void format_line3(char *tokens[], int count)
 		nop();
 	else if (strcmp(tokens[0], "pall") == 0)
 		pall();
+	else if (strcmp(tokens[0], "pchar") == 0)
+	{
+		if (pchar(count) == -1)
+		{
+			fprintf(stderr, "L%d: can't pchar, stack empty\n", count);
+			exit(EXIT_FAILURE);
+		}
+	}
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", count, tokens[0]);

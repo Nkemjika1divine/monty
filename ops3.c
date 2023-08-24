@@ -27,3 +27,26 @@ int mod(void)
 	free(first);
 	return (1);
 }
+
+
+
+/**
+ * pchar - this function orints the ascii valie of the top element
+ *
+ * Return: 1 if successful, 0 if element cant be cobverted ,-1 if stack emoty
+ */
+int pchar(int count)
+{
+	if (top == NULL)
+		return (-1);
+
+	if (putchar(top->n) == EOF)
+	{
+		fprintf(stderr, "L%d, can't pchar, value out of range", count);
+		exit(EXIT_FAILURE);
+	}
+	putchar('\n');
+
+	return (1);
+}
+

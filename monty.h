@@ -62,6 +62,7 @@ int mul(void);
 
 /*ops3.c*/
 int mod(void);
+int pchar(int count);
 
 
 /*main.c*/
