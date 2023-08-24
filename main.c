@@ -17,7 +17,7 @@ stack_t *top = NULL;
 int main(int argc, char *argv[])
 {
 	FILE *fd;
-	char line[20], *tokens[5], *vec, *str;
+	char line[20], *tokens[5], *vec;
 	int count = 0, a, i;
 
 	if (argc != 2)
@@ -34,12 +34,11 @@ int main(int argc, char *argv[])
 	}
 	while (fgets(line, sizeof(line), fd) != NULL)
 	{
-		str = fix_string(line);
-		if (str != NULL)
+		if (spaces(line) != 1)
 		{
 			count++;
-			line[strcspn(str, "\n")] = '\0'; /*null terminate the line*/
-			vec = strtok(str, " "); /*tokenize the line*/
+			line[strcspn(line, "\n")] = '\0'; /*null terminate the line*/
+			vec = strtok(line, " "); /*tokenize the line*/
 			if (vec[0] == '#') /*if the first character is a #*/
 				continue;
 			i = 0;
@@ -52,8 +51,6 @@ int main(int argc, char *argv[])
 			for (a = 0; a < i; a++)
 				free(tokens[a]);
 		}
-		else
-			continue;
 	}
 	fclose(fd);
 	return (0);
