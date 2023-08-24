@@ -127,10 +127,11 @@ char *fix_string(char *line)
 			token++;
 		}
 		*normal = '\0';
-		return (normal);
+		return (buffer);
 	}
 	else
+	{
+		free(buffer);
 		return (NULL);
-
-	return (normal);
+	}
 }
