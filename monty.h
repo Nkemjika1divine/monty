@@ -1,6 +1,8 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#include <stdbool.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -37,7 +39,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern stack_t *top = NULL;
+extern stack_t *top;
 
 
 /*ops1.c*/
@@ -53,11 +55,26 @@ int pint(void);
 int add(void);
 void nop(void);
 int sub(void);
-int div(void);
+int divi(void);
 int mul(void);
 
 
-/*error.c*/
-void malloc_error(void);
+
+/*ops3.c*/
+int mod(void);
+
+
+/*main.c*/
+void format_line1(char *tokens[], int count);
+void format_line2(char *tokens[], int count);
+void format_line3(char *tokens[], int count);
+
+
+/*utility.c*/
+char *_strdup(char *str);
+int is_space(char c);
+int spaces(char *input);
+char *remove_hash(char *line);
+char *fix_string(char *line);
 
 #endif

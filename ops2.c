@@ -50,7 +50,7 @@ int sub(void)
 	if (top == NULL || top->next == NULL)
 		return (-1);
 
-	a = first->n - second->n;
+	a = second->n - first->n;
 
 	first->next = NULL;
 	second->prev = NULL;
@@ -63,11 +63,11 @@ int sub(void)
 
 
 /**
- * div - divides the too by the secind and reolaces the second with the reault
+ * divi - divides the too by the secind and reolaces the second with the reault
  *
  * Return: 1 f successful, 0 if top is 0 and -1 if not successful
  */
-int div(void)
+int divi(void)
 {
 	stack_t *first = top, *second = top->next;
 	int a = 0;

@@ -1,5 +1,7 @@
 #include "monty.h"
 
+stack_t *top = NULL;
+
 /**
  * push - this function oushes an element onto a stack
  * @n: the element to be added
@@ -27,7 +29,7 @@ void push(int n)
 			temp->prev = NULL;
 			temp->n = n;
 			temp->next = top;
-			top->next = temp;
+			top->prev = temp;
 
 			top = temp;
 		}
@@ -48,7 +50,8 @@ int pop(void)
 		return (-1);
 
 	top = top->next;
-	top->prev = NULL;
+	if (top != NULL)
+		top->prev = NULL;
 	free(temp);
 
 	return (1);
@@ -66,7 +69,7 @@ void pall(void)
 	{
 		while (temp != NULL)
 		{
-			printf("%d", temp->n);
+			printf("%d\n", temp->n);
 			temp = temp->next;
 		}
 	}
@@ -83,7 +86,7 @@ int pint(void)
 	if (top == NULL)
 		return (-1);
 
-	printf("%d", top->data);
+	printf("%d\n", top->n);
 	return (1);
 }
 
