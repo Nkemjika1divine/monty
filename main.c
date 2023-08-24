@@ -70,9 +70,9 @@ void format_line1(char *tokens[], int count)
 	if (strcmp(tokens[0], "push") == 0)
 	{
 		a = atoi(tokens[1]);
-		if (strcmp(tokens[1], "0") == 0)
-			push(0);
-		else if (a == 0)
+		/*if (strcmp(tokens[1], "0") == 0)
+			push(0);*/
+		if (a == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", count);
 			exit(EXIT_FAILURE);
