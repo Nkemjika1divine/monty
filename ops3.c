@@ -83,7 +83,7 @@ void pstr(void)
 
 
 /**
- * rotl - this rotates the stack one place forward. top is last and 2nd is top
+ * rotr - this rotates the stack one place forward. top is last and 2nd is top
  */
 void rotr(void)
 {
