@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
 				free(tokens[a]);
 		}
 	}
+	free_stack(top);
 	fclose(fd);
 	return (0);
 }
@@ -200,5 +201,25 @@ void format_line3(char *tokens[], int count)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", count, tokens[0]);
 		exit(EXIT_FAILURE);
+	}
+}
+
+
+
+
+
+/**
+ * free_stack - frees the stack_t
+ * @top: pointer to the first node
+ */
+void free_stack(stack_t *top)
+{
+	stack_t *temp = top;
+
+	while (temp != NULL)
+	{
+		temp = temp->next;
+		free(top);
+		top = temp;
 	}
 }

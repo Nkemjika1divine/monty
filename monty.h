@@ -71,6 +71,7 @@ void rotr(void);
 void format_line1(char *tokens[], int count);
 void format_line2(char *tokens[], int count);
 void format_line3(char *tokens[], int count);
+void free_stack(stack_t *top);
 
 
 /*utility.c*/
